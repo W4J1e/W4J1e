@@ -1,6 +1,9 @@
-## Hi! I'm Flexiston 👋
 
-> Go for it now. The future is promised to no one.
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=W4J1e)](https://github.com/anuraghazra/github-readme-stats)
+
+## Hi! I'm W4J1e
+
+
 
 📄 **Blogger** / 🎨 **teacher** / 💻 **Joker**
 
@@ -16,4 +19,3 @@
 
 #### Nice to see you! 
 
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=W4J1e)](https://github.com/anuraghazra/github-readme-stats)
