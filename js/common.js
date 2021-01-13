@@ -1,7 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
-        name:" W4j1e° ",
+        name:" 瓦解° ",
         background_image:'img/66624.jpg',
         avatar:'img/duola.jpg',
         str1:"  是 凡 人 ",
