@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>W4J1e</title>
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen"/>
+    <!-- Hover.css -->
+    <link rel="stylesheet" href="css/hover-min.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" media="screen"/>
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.theme.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Addon Style -->
+    <link rel="stylesheet" href="css/style.css" media="screen"/>
+
+</head>
+
+<body>
+<div id="app">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="loader">
+            <img src="img/cube.gif" alt="preload spinner">
+            <div class="pre-logo">
+                <h4>Cross.</h4>
+            </div>
+        </div>
+    </div>
+    <!-- End of preloader -->
+
+    <!-- Start wrapper as cross-portfolio -->
+    <div id="cross-portfolio" class="cross-portfolio">
+
+        <!-- Hamburger menu on scroll-->
+        <nav id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>        </nav>
+        <!-- end of hamburger -->
+
+        <!-- Overlay menu -->
+        <nav id="menu-overlay">
+            <ul id="menu" class="menu-click list-unstyled">
+                <li><a data-scroll href="#profile" class="smooth-scroll">TOP</a></li>
+                <li><a data-scroll href="#skill" class="smooth-scroll">Skill</a></li>
+                <li><a data-scroll href="#count" class="smooth-scroll">Work</a></li>
+                <li><a data-scroll href="#resume" class="smooth-scroll">Resume</a></li>
+                <li><a href="https://w4j1e.xyz">Blog</a></li>
+            </ul>
+        </nav>
+        <!-- end of overlay menu -->
+
+        <!-- Start intro / background / big title -->
+        <div id="intro">
+
+            <!-- Background -->
+            <div class="bg">
+                <div class="bg-img">
+                    <img :src="background_image" alt="Background Image"/>
+                </div>
+            </div>
+            <!-- End of background -->
+
+            <!-- Top logo -->
+            <div class="cross-top">
+                <a href="index.html" class="logo"><span>Cross.</span></a>
+            </div>
+            <!-- End of top logo -->
+
+            <!-- The middle big title -->
+            <div class="big-title">
+                <div class="text-center">
+                    <h1 class="name">{{ name }}</h1>
+                    <p><span class="sub-title"></span></p>
+                </div>
+            </div>
+            <!-- End of big title -->
+
+            <!-- Chevron arrow down button -->
+            <button class="trigger hvr-hang"><i class="fa fa-chevron-down"></i></button>
+
+        </div>
+        <!-- End of intro -->
+
+        <!-- Start of profile -->
+        <div id="profile" class="content">
+            <div class="containers">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <!-- Title -->
+                        <div class="title">
+                            <h1 class="name">{{ name }}</h1>
+                            <span class="h4 element"></span>
+                        </div>
+                        <!-- End of title -->
+
+                        <!-- About me -->
+                        <div class="space">
+                            <h3>自我介绍</h3>
+                            <p class="text-justify about_p1">{{ about_p1 }}</p>
+                            <p class="text-justify about_p2">{{ about_p2 }}</p>
+                        </div>
+                        <!-- End of about me -->
+                    </div>
+
+                    <!-- Avatar image -->
+                    <div class="col-lg-6 col-md-12 col-sm-12 hidden-md animated">
+                        <img :src="avatar" alt="Avatar" width="100%">
+                    </div>
+                    <!-- End avatar image -->
+
+                    <!-- Start skills / expertise -->
+                    <div id="skill" class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="space">
+                            <h3>技 能 指 数</h3>
+
+                            <h5>{{skill1}}</h5>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-danger" :style="{width:skill1_num}"></div>
+                            </div>
+
+                            <h5>{{skill2}}</h5>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-success" :style="{width:skill2_num}"></div>
+                            </div>
+
+
+                            <h5>{{skill3}}</h5>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-default" :style="{width:skill3_num}"></div>
+                            </div>
+
+                            <h5>{{skill4}}</h5>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-success" :style="{width:skill4_num}"></div>
+                            </div>
+
+                            <h5>{{skill5}}</h5>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-warning" :style="{width:skill5_num}"></div>
+                            </div>
+
+                            <h5>{{skill6}}</h5>
+                            <div class="progress progress-striped active">
+                                <div class="progress-bar progress-bar-danger" :style="{width:skill6_num}"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End of skills / expertise -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end containers -->
+        </div>
+        <!-- end profile -->
+
+        <!-- Start countTo -->
+        <div id="count" class="content">
+            <div class="containers">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!-- CountTo -->
+                        <div class="animated text-center">
+                            <div class="col-md-4">
+                                <p class="h2"><i class="fa fa-desktop"></i>
+                                    <span :data-to="work_years" class="count" data-from="0"
+                                          data-speed="5000" data-refresh-interval="50"></span></p>
+                                <h5 class="text-weight">工作时间</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="h2"><i class="fa fa-cny"></i>
+                                    <span :data-to="project_num" class="count" data-from="0"
+                                          data-speed="5000" data-refresh-interval="50"></span></p>
+                                <h5 class="text-weight">存款总额</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="h2"><i class="fa fa-comments"></i>
+                                    <span :data-to="code_line_num" class="count" data-from="0"
+                                          data-speed="5000" data-refresh-interval="50"></span></p>
+                                <h5 class="text-weight">吹牛个数</h5>
+                            </div>
+                        </div>
+                        <!-- End countTo -->
+
+                    </div>
+                    <!-- end col-md-12 -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end containers -->
+        </div>
+        <!-- End of countTo -->
+
+        <!--&lt;!&ndash; Start services / what I can &ndash;&gt;-->
+        <!--<div id="services" class="content">-->
+        <!--<div class="containers">-->
+        <!--<div class="row">-->
+
+        <!--&lt;!&ndash; Title &ndash;&gt;-->
+        <!--<div class="col-md-12 headline">-->
+        <!--<h2>WHAT I CAN</h2>-->
+        <!--<hr>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; end title &ndash;&gt;-->
+
+        <!--&lt;!&ndash; Start &ndash;&gt;-->
+        <!--<div class="col-md-12">-->
+        <!--<div class="row">-->
+
+        <!--<div class="col-sm-6 animated">-->
+        <!--<div class="panel panel-default hvr-grow-shadow">-->
+        <!--<div class="panel-body">-->
+        <!--<div class="icon-item">-->
+        <!--<i class="fa fa-code"></i>-->
+        <!--<h5>CLEAN CODE</h5>-->
+        <!--</div>-->
+        <!--<div class="text-justify">-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac accumsan lobortis.</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="col-sm-6 animated">-->
+        <!--<div class="panel panel-default hvr-grow-shadow">-->
+        <!--<div class="panel-body">-->
+        <!--<div class="icon-item">-->
+        <!--<i class="fa fa-desktop"></i>-->
+        <!--<h5>RESPONSIVE UI</h5>-->
+        <!--</div>-->
+        <!--<div class="text-justify">-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac accumsan lobortis.</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; .row &ndash;&gt;-->
+
+        <!--<div class="row">-->
+        <!--<div class="col-sm-6 animated">-->
+        <!--<div class="panel panel-default hvr-grow-shadow">-->
+        <!--<div class="panel-body">-->
+        <!--<div class="icon-item">-->
+        <!--<i class="fa fa-cloud"></i>-->
+        <!--<h5>CLOUD DEVELOPMENT</h5>-->
+        <!--</div>-->
+        <!--<div class="text-justify">-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac accumsan lobortis.</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="col-sm-6 animated">-->
+        <!--<div class="panel panel-default hvr-grow-shadow">-->
+        <!--<div class="panel-body">-->
+        <!--<div class="icon-item">-->
+        <!--<i class="fa fa-rocket"></i>-->
+        <!--<h5>FAST PERFORMANCE</h5>-->
+        <!--</div>-->
+        <!--<div class="text-justify">-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac accumsan lobortis.</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; end services item &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; row &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; col-md-12 &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; row &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; containers &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; End of services / what i can &ndash;&gt;-->
+
+        <!--&lt;!&ndash; Start of portfolio &ndash;&gt;-->
+        <!--<div id="portfolio" class="content">-->
+        <!--<div class="containers">-->
+        <!--<div class="row">-->
+
+        <!--&lt;!&ndash; title &ndash;&gt;-->
+        <!--<div class="col-md-12 headline">-->
+        <!--<h2>RECENT WORK</h2>-->
+        <!--<hr>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; end title &ndash;&gt;-->
+
+        <!--&lt;!&ndash; start work profolio image &ndash;&gt;-->
+        <!--<div class="col-md-12 space">-->
+
+        <!--&lt;!&ndash; image 1 &ndash;&gt;-->
+        <!--<figure class="cross-image animated">-->
+        <!--<img src="img/project_1.jpg" alt="Project 1" />-->
+        <!--<figcaption>-->
+        <!--<h2>Project 1</h2>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac accumsan lobortis.</p>-->
+        <!--<a href="#">View More</a>-->
+        <!--</figcaption>-->
+        <!--</figure>-->
+
+        <!--&lt;!&ndash; image 2 &ndash;&gt;-->
+        <!--<figure class="cross-image animated">-->
+        <!--<img src="img/project_2.jpg" alt="Project 2" />-->
+        <!--<figcaption>-->
+        <!--<h2>Project 2</h2>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac accumsan lobortis.</p>-->
+        <!--<a href="#">View More</a>-->
+        <!--</figcaption>-->
+        <!--</figure>-->
+
+        <!--&lt;!&ndash; image 3 &ndash;&gt;-->
+        <!--<figure class="cross-image animated">-->
+        <!--<img src="img/project_3.jpg" alt="Project 3" />-->
+        <!--<figcaption>-->
+        <!--<h2>Project 3</h2>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac accumsan lobortis.</p>-->
+        <!--<a href="#">View More</a>-->
+        <!--</figcaption>-->
+        <!--</figure>-->
+
+        <!--&lt;!&ndash; image 4 &ndash;&gt;-->
+        <!--<figure class="cross-image animated">-->
+        <!--<img src="img/project_4.jpg" alt="Project 4" />-->
+        <!--<figcaption>-->
+        <!--<h2>Project 4</h2>-->
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac accumsan lobortis.</p>-->
+        <!--<a href="#">View More</a>-->
+        <!--</figcaption>-->
+        <!--</figure>-->
+
+        <!--</div>-->
+        <!--&lt;!&ndash; end of work portfolio image &ndash;&gt;-->
+
+        <!--&lt;!&ndash; middle view more button &ndash;&gt;-->
+        <!--<div class="col-md-12 text-center animated">-->
+        <!--<a href="#" class="btn btn-success btn-lg" data-toggle="modal" data-target="#projectModal"><i class="fa fa-plane"></i> View More</a>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; end button &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; row &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; containers &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; End of portfolio &ndash;&gt;-->
+
+
+        <!-- Start of resume -->
+        <div id="resume" class="content">
+            <div class="containers">
+                <div class="row">
+
+                    <!-- title -->
+                    <div class="col-md-12 headline">
+                        <h2>个人简历</h2>
+                        <hr>
+                    </div>
+                    <!-- end title-->
+                </div>
+                <!-- .row -->
+
+                <!-- start resume item -->
+                <div class="row">
+
+                    <div class="col-md-12 animated">
+                        <h3>教育背景</h3>
+                    </div>
+
+                    <!-- education 1 -->
+                    <div class="col-sm-8 col-md-8 col-md-push-4 animated">
+                        <h4>{{major1}}</h4>
+                        <p>{{major_dtl1}}</p>
+                        <hr class="hidden-xs">
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-md-pull-8 animated">
+                        <div class="icon-list">
+                            <div class="icon-list-icon">
+                                <i class="fa fa-graduation-cap"></i>
+                            </div>
+                            <div class="icon-list-content">
+                                <div class="icon-list-title">{{school1}}</div>
+                                <div class="icon-list-info">
+                                    <span>{{years1}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="visible-xs">
+                    </div>
+
+                    <!-- education 2 -->
+                    <div class="col-sm-8 col-md-8 col-md-push-4 animated">
+                        <h4>{{major2}}</h4>
+                        <p>{{major_dtl2}}</p>
+                        <hr class="hidden-xs">
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-md-pull-8 animated">
+                        <div class="icon-list">
+                            <div class="icon-list-icon">
+                                <i class="fa fa-graduation-cap"></i>
+                            </div>
+                            <div class="icon-list-content">
+                                <div class="icon-list-title">{{school2}}</div>
+                                <div class="icon-list-info">
+                                    <span>{{years2}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="visible-xs">
+                    </div>
+
+                </div>
+                <!-- .row -->
+
+                <div class="row">
+                    <div class="col-md-12 animated">
+                        <h3>工作背景</h3>
+                    </div>
+
+                    <!-- experience 1 -->
+                    <div class="col-sm-8 col-md-8 col-md-push-4 animated">
+                        <h4>{{job1}}</h4>
+                        <p>{{jobp1}}</p>
+                        <hr class="hidden-xs">
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-md-pull-8 animated">
+                        <div class="icon-list">
+                            <div class="icon-list-icon">
+                                <i class="fa fa-briefcase"></i>
+                            </div>
+                            <div class="icon-list-content">
+                                <div class="icon-list-title">{{cpn1}}</div>
+                                <div class="icon-list-info">
+                                    <span>{{cpnyear1}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="visible-xs">
+                    </div>
+
+                    <!-- experience 2 -->
+                    <div class="col-sm-8 col-md-8 col-md-push-4 animated">
+                        <h4>{{job2}}</h4>
+                        <p>{{jobp2}}</p>
+                        <hr class="hidden-xs">
+                    </div>
+
+                    <div class="col-sm-4 col-md-4 col-md-pull-8 animated">
+                        <div class="icon-list">
+                            <div class="icon-list-icon">
+                                <i class="fa fa-briefcase"></i>
+                            </div>
+                            <div class="icon-list-content">
+                                <div class="icon-list-title">{{cpn2}}</div>
+                                <div class="icon-list-info">
+                                    <span>{{cpnyear2}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="visible-xs">
+                    </div>
+
+                </div>
+                <!-- .row -->
+
+                <!-- blog button -->
+                <div class="row">
+                    <div class="col-md-12 animated text-center">
+                         <a href="https://w4j1e.xyz" class="btn btn-default btn-lg"><i class="fa fa-user"></i> 个人博客</a>
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- containers -->
+        </div>
+        <!-- End of portfolio -->
+
+        <!--&lt;!&ndash; Start testimonial &ndash;&gt;-->
+        <!--<div id="testimonial" class="content">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-12">-->
+
+                    <!--&lt;!&ndash; Carousel Slides / Quotes &ndash;&gt;-->
+                    <!--<div class="carousel-inner animated">-->
+
+                        <!--&lt;!&ndash; Quote 1 &ndash;&gt;-->
+                        <!--<div class="item">-->
+                            <!--<blockquote>-->
+                                <!--<div class="row">-->
+                                    <!--<div class="col-sm-3 text-center">-->
+                                        <!--<img class="img-circle" src="img/mike.png" alt="Mike Avatar">-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-9">-->
+                                        <!--<p class="text-item">Neque porro quisquam est qui dolorem ipsum quia dolor sit-->
+                                            <!--amet,-->
+                                            <!--consectetur, adipisci velit!</p>-->
+                                        <!--<small>Mike Tyson</small>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</blockquote>-->
+                        <!--</div>-->
+
+                        <!--&lt;!&ndash; Quote 2 &ndash;&gt;-->
+                        <!--<div class="item">-->
+                            <!--<blockquote>-->
+                                <!--<div class="row">-->
+                                    <!--<div class="col-sm-3 text-center">-->
+                                        <!--<img class="img-circle" src="img/adam.jpg" alt="Adam Avatar">-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-9">-->
+                                        <!--<p class="text-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.-->
+                                            <!--Etiam-->
+                                            <!--auctor nec lacus ut tempor. Mauris.</p>-->
+                                        <!--<small>Adam Sandler</small>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</blockquote>-->
+                        <!--</div>-->
+
+                        <!--&lt;!&ndash; Quote 3 &ndash;&gt;-->
+                        <!--<div class="item">-->
+                            <!--<blockquote>-->
+                                <!--<div class="row">-->
+                                    <!--<div class="col-sm-3 text-center">-->
+                                        <!--<img class="img-circle" src="img/ben.png" alt="Ben Avatar">-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-9">-->
+                                        <!--<p class="text-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut-->
+                                            <!--rutrum elit in arcu blandit, eget pretium nisl accumsan.</p>-->
+                                        <!--<small>Ben Beatles</small>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</blockquote>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+                    <!--&lt;!&ndash; End Carousel Slides &ndash;&gt;-->
+                <!--</div>-->
+                <!--&lt;!&ndash; col-md-12 &ndash;&gt;-->
+            <!--</div>-->
+            <!--&lt;!&ndash; row &ndash;&gt;-->
+        <!--</div>-->
+        <!--&lt;!&ndash; End of testimonial &ndash;&gt;-->
+
+        <!-- Start of contact -->
+        <!--<div id="contact" class="content">-->
+            <!--<div class="containers">-->
+                <!--<div class="row space">-->
+
+                    <!-- title -->
+                    <!--<div class="col-md-12 headline">-->
+                        <!--<h2>LET'S WORK TOGETHER</h2>-->
+                        <!--<hr>-->
+                        <!--<p>I'm available for freelance opportunities.</p>-->
+                    <!--</div>-->
+                    <!-- End title -->
+
+                    <!-- Start google maps / change your address in data-center-->
+                    <!--<div class="col-md-12 animated">-->
+                        <!--<div class="gmap" id="map" data-center="121 S Pinckney St" data-zoom="15">-->
+                            <!--<address>-->
+                                <!--121 S Pinckney St-->
+                            <!--</address>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!-- End google maps -->
+                <!--</div>-->
+                <!-- row -->
+
+                <!-- Email me button -->
+                <!--<div class="row">-->
+                    <!--<div class="col-md-12 animated text-center">-->
+                        <!--<a href="mailto:youremail@gmail.com" class="btn btn-primary btn-lg"><i-->
+                                <!--class="fa fa-envelope"></i>-->
+                            <!--EMAIL ME</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!-- row -->
+            <!--</div>-->
+            <!-- containers -->
+        <!--</div>-->
+        <!-- End of contact -->
+
+        <!-- Start footer -->
+        <div id="footer" class="content">
+            <div class="containers">
+                <div class="row">
+
+                    <div class="col-md-12 text-center">
+                        <a href="index.html" class="footer-logo"><span>Cross.</span></a>
+                        <ul class="social">
+                            <li class="hvr-grow"><a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=892599923"><i class="fa fa-qq"></i></a></li>
+                            <li class="hvr-grow"><a href="https://w4j1e.xyz"><i class="fa fa-wechat"></i></a></li>
+                            <li class="hvr-grow"><a href="https://w4j1e.xyz"><i class="fa fa-weibo"></i></a></li>
+                            <li class="hvr-grow"><a href="javascript:alert('垃圾脸书不用也罢！');"><i class="fa fa-facebook"></i></a></li>
+                            <li class="hvr-grow"><a href="javascript:alert('无法访问Google');"><i class="fa fa-google"></i></a></li>
+                        </ul>
+                        <p>Copyright &copy; 2021.W4j1e All rights reserved.
+                        </p>
+                    </div>
+
+                </div>
+                <!-- row -->
+            </div>
+            <!-- containers -->
+        </div>
+        <!-- End of footer -->
+
+    </div>
+    <!-- end cross portfolio -->
+
+    <!-- Fullscreen Modal -->
+    <div class="modal fade fullscreen" id="projectModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- modal button close -->
+                    <a href="#" class="close" data-dismiss="modal"><i class="fa fa-times"></i></a>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-md-8 col-md-offset-2">
+
+                            <!-- image 1 -->
+                            <figure class="cross-image">
+                                <img src="img/project_1.jpg" alt="Project 5"/>
+                                <figcaption>
+                                    <h2>Project 5</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac
+                                        accumsan lobortis.</p>
+                                <a href="#">View More</a>                                </figcaption>
+                          </figure>
+
+                            <!-- image 2 -->
+                            <figure class="cross-image">
+                                <img src="img/project_2.jpg" alt="Project 6"/>
+                                <figcaption>
+                                    <h2>Project 6</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac
+                                        accumsan lobortis.</p>
+                                <a href="#">View More</a>                                </figcaption>
+                          </figure>
+
+                            <!-- image 3 -->
+                            <figure class="cross-image">
+                                <img src="img/project_3.jpg" alt="Project 7"/>
+                                <figcaption>
+                                    <h2>Project 7</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac
+                                        accumsan lobortis.</p>
+                                <a href="#">View More</a>                                </figcaption>
+                          </figure>
+
+                            <!-- image 4 -->
+                            <figure class="cross-image">
+                                <img src="img/project_4.jpg" alt="Project 8"/>
+                                <figcaption>
+                                    <h2>Project 8</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac
+                                        accumsan lobortis.</p>
+                                <a href="#">View More</a>                                </figcaption>
+                          </figure>
+
+                            <!-- image 5 -->
+                            <figure class="cross-image">
+                                <img src="img/project_1.jpg" alt="Project 9"/>
+                                <figcaption>
+                                    <h2>Project 9</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac
+                                        accumsan lobortis.</p>
+                                <a href="#">View More</a>                                </figcaption>
+                          </figure>
+
+                            <!-- image 6 -->
+                            <figure class="cross-image">
+                                <img src="img/project_2.jpg" alt="Project 10"/>
+                                <figcaption>
+                                    <h2>Project 10</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit libero ac
+                                        accumsan lobortis.</p>
+                                <a href="#">View More</a>                                </figcaption>
+                          </figure>
+
+                        </div>
+                        <!-- col-md-8 -->
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- modal body -->
+            </div>
+            <!-- modal-content -->
+        </div>
+        <!-- modal-dialog -->
+    </div>
+    <!-- fullscreen -->
+</div>
+<!--Script -->
+<script src="https://cdn.bootcss.com/vue/2.5.17/vue.js"></script>
+<!--<script src="js/vue.min.js"></script>-->
+<!-- Jquery v1.12.0 -->
+<script src="js/jquery.min.js"></script>
+<!--Bootstrap Js-->
+<script src="js/bootstrap.min.js"></script>
+<!--Classie js -->
+<script src="js/classie.min.js"></script>
+<!--Typed js -->
+<script src="js/typed.min.js"></script>
+<!-- OwlCarousel -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- Google maps -->
+<!---<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;language=en"></script>--->
+<!-- Mobile map for google -->
+<script src="js/jquery.mobilegmap.min.js"></script>
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<!-- ScrollReveal -->
+<script src="js/scrollreveal.min.js"></script>
+<!-- CountTo -->
+<script src="js/jquery.countTo.min.js"></script>
+<!-- SmoothScroll -->
+<script src="js/smooth-scroll.min.js"></script>
+<!-- Custom js -->
+<script src="js/common.js"></script>
+<script src="js/main.js"></script>
+
+<!-- end script -->
+</body>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76ab374e00f4b853f0ff3310ac6daa96";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</html>
+
