@@ -15,7 +15,7 @@
 
 ### Where To Find Me 🔍
 
-- 📝 My Blog: [**W4J1e's Blog**](https://w4j1e.xyz)
+- 📝 My Blog: [**W4J1e's Blog**](https://www.hin.cool)
 - 💻 My profile:[**About W4J1e**](https://i.w4j1e.xyz/)
 
 #### Nice to see you! 
