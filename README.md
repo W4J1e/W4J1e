@@ -1,6 +1,6 @@
 
 	
-[![W4J1e's github stats](https://github-readme-stats.vercel.app/api?username=W4J1e)]
+![W4J1e's github stats](https://github-readme-stats.vercel.app/api?username=W4J1e)
 ## Hi! I'm W4J1e
 
 
