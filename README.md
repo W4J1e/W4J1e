@@ -1,5 +1,6 @@
 
-<iframe src="https://github-readme-stats.vercel.app/api?username=W4J1e" height="200" frameborder="no" border="0" width="100%"> </iframe>
+	
+[![W4J1e's github stats](https://github-readme-stats.vercel.app/api?username=W4J1e)](https://github.com/anuraghazra/github-readme-stats)
 
 ## Hi! I'm W4J1e
 
