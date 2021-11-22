@@ -4,10 +4,17 @@
 📄 **Blogger** / 🎨 **teacher** / 💻 **Joker**
 
 - 😄 我有一个很酷的域名
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I have a pretty **cool** domain
+
+
 - 🤺  我喜欢的运动是♂击剑
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I like boys ~~who looks beautiful~~,
+
+
 - 🌱 正在研究如何具有艺术性地拍领导马屁，并着手编写一册《溜须拍马指导意见》。
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I'm learning how to flatter leaders artfully, and set out to compile a book of "Guiding Opinions on Slipping a Mustache".
 
 ## Experience
