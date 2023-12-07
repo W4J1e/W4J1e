@@ -38,8 +38,7 @@
 
 ### Find Me 🔍
 
-- 📝 My Blog: [**W4J1e's Blog**](https://hin.cool)
-- 💻 My profile:[**About W4J1e**](https://i.hin.cool)
+- 💻 My Blog: [**W4J1e's Blog**](https://hin.cool)
 
 #### Nice to see you! 
 
