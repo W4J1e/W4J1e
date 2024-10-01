@@ -42,4 +42,3 @@
 
 #### Nice to see you! 
 
-![W4J1e's github stats](https://github-readme-stats.vercel.app/api?username=W4J1e)
