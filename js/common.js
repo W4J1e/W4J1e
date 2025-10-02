@@ -3,7 +3,7 @@ var app = new Vue({
     data: {
         name:" 瓦解° ",
         background_image:'img/66624.jpg',
-        avatar:'img/duola.jpg',
+        avatar:'img/LonelyGod.png',
         str1:"  是 凡 人 ",
         str2:" 也 什 么 都 不 是 ",
         str3:" 是 个 凡 人 ",
@@ -42,6 +42,6 @@ var app = new Vue({
         job2:'马厩技工',
         jobp2:'研究如何具有艺术性地拍领导马屁，并着手编写一册《溜须拍马指导意见》。',
         cpn2:'Fengdu',
-        cpnyear2:'2017 - 2022'
+        cpnyear2:'2017 - '
     }
 })
