@@ -15,7 +15,7 @@
 
 - 🌱 正在研究如何具有艺术性地拍领导马屁，并着手编写一册《溜须拍马指导意见》。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I'm learning how to flatter leaders artfully, and set out to compile a book of "Guiding Opinions on Slipping a Mustache".
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I am currently researching how to flatter leaders in an artistic way, and begun to write a guide titled “Guidelines for Flattery and Adulation.”
 
 ## Experience
 🎓 **早稻田大学 2010 - 2012**
