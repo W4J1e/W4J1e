@@ -77,6 +77,17 @@ function createComets() {
 }
 createComets();
 
+// ===== 作品卡片横向流动（悬停暂停） =====
+(function () {
+    const grid = document.querySelector('.projects-grid');
+    if (!grid) return;
+    const track = document.createElement('div');
+    track.className = 'projects-track';
+    while (grid.firstChild) track.appendChild(grid.firstChild);
+    grid.appendChild(track);
+    track.innerHTML += track.innerHTML; // 复制一份实现无缝循环
+})();
+
 // ===== 技能条动画 =====
 const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -109,7 +120,7 @@ const cardObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.about-card, .skill-card, .project-card').forEach(card => {
+document.querySelectorAll('.about-card, .skill-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
